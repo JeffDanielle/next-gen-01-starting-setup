@@ -27,18 +27,32 @@ var __assign = (this && this.__assign) || function () {
 // const add = (a: number, b: number = 5) => {
 //     return a + b;
 // };
-var add = function (a, b) {
-    if (b === void 0) { b = 5; }
-    return a + b;
-};
-var printOutput = function (output) {
-    return console.log(output);
-};
-var button = document.querySelector("button");
-if (button) {
-    button.addEventListener("click", function (event) { return console.log(event); });
-}
-printOutput(add(5));
+// const add = (a: number, b: number = 5) => {
+//     return a + b;
+// };
+// const printOutput: (a: number | string) => void = (output) =>
+//     console.log(output);
+// const button = document.querySelector("button");
+// if (button) {
+//     button.addEventListener("click", (event) => console.log(event));
+// }
+// printOutput(add(5));
 var hobbies = ["sports", "cooking"];
 var activeHobbies = ["Gaming"];
-console.log(__assign(__assign({}, hobbies), { activeHobbies: activeHobbies }));
+// console.log([...hobbies, activeHobbies]);
+var person = {
+    name: "Jeff",
+    age: 24,
+};
+// Spread operator fetch key value pairs
+var copiedPerson = __assign({}, person);
+// Rest accepts any number of parameters
+var add = function () {
+    var numbers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        numbers[_i] = arguments[_i];
+    }
+    return numbers.reduce(function (acc, cur) { return acc + cur; }, 0);
+};
+var addedNumbers = add(2, 5, 6, 7, 8, 9);
+console.log(addedNumbers);
