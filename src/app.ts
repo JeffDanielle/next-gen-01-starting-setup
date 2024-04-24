@@ -36,3 +36,8 @@ if (button) {
 }
 
 printOutput(add(5));
+
+const hobbies = ["sports", "cooking"];
+const activeHobbies = ["Gaming"];
+
+console.log([...hobbies, activeHobbies]);
