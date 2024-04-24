@@ -13,6 +13,7 @@
 // }
 // console.log(isOld);
 var add = function (a, b) {
+    if (b === void 0) { b = 5; }
     return a + b;
 };
 // console.log(add(1, 2));
@@ -23,3 +24,4 @@ var button = document.querySelector("button");
 if (button) {
     button.addEventListener("click", function (event) { return console.log(event); });
 }
+printOutput(add(5));

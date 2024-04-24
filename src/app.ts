@@ -17,11 +17,14 @@
 
 // console.log(isOld);
 
-const add = (a: number, b: number) => {
+// default value for a parameter
+// const add = (a: number, b: number = 5) => {
+//     return a + b;
+// };
+
+const add = (a: number, b: number = 5) => {
     return a + b;
 };
-
-// console.log(add(1, 2));
 
 const printOutput: (a: number | string) => void = (output) =>
     console.log(output);
@@ -31,3 +34,5 @@ const button = document.querySelector("button");
 if (button) {
     button.addEventListener("click", (event) => console.log(event));
 }
+
+printOutput(add(5));
