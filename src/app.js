@@ -41,7 +41,7 @@ var hobbies = ["sports", "cooking"];
 var activeHobbies = ["Gaming"];
 // console.log([...hobbies, activeHobbies]);
 var person = {
-    name: "Jeff",
+    firstName: "Jeff",
     age: 24,
 };
 // Spread operator fetch key value pairs
@@ -56,3 +56,9 @@ var add = function () {
 };
 var addedNumbers = add(2, 5, 6, 7, 8, 9);
 console.log(addedNumbers);
+// Array destructuring
+var h1 = hobbies[0], h2 = hobbies[1], remainingHobbies = hobbies.slice(2);
+console.log(hobbies, h1, h2);
+// Object destructuring
+var firstName = person.firstName, age = person.age;
+console.log(firstName, age);
